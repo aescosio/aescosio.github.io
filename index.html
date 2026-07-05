@@ -22,6 +22,7 @@
     <a href="#about" class="nav__link">Who Am I</a>
     <a href="#services" class="nav__link">Services</a>
     <a href="#work" class="nav__link">Work Samples</a>
+    <a href="#tools" class="nav__link">Tools I Used</a>
     <a href="#contact" class="nav__link nav__link--cta">Contact</a>
   </nav>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -35,15 +36,40 @@
   <div class="hero__glow" aria-hidden="true"></div>
 
   <div class="hero__inner">
-    <p class="eyebrow reveal">Adrian Escosio · General Virtual Assistant</p>
-    <h1 class="hero__title reveal">Portfolio</h1>
+    <span class="hero__tag reveal">Portfolio</span>
+    <p class="eyebrow reveal">Adrian Escosio</p>
+    <h1 class="hero__title reveal">Reliable General<br>Virtual Assistant</h1>
+    <p class="hero__typing reveal" aria-hidden="true">
+      Helping you with <span class="typing-word" id="typingWord"></span><span class="typing-cursor">|</span>
+    </p>
     <p class="hero__subtitle reveal">
-      Lead generation, data entry, calendar management, and admin support —
-      handled with the same discipline I once used to manage real business capital.
+      I help busy entrepreneurs and small teams stay organized and productive — from lead
+      generation and calendar management to email support and content scheduling — so you
+      can focus on growing your business.
     </p>
     <div class="hero__actions reveal">
-      <a href="#work" class="btn btn--primary">View My Work</a>
-      <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      <a href="#work" class="btn btn--primary">View Portfolio</a>
+      <a href="#contact" class="btn btn--ghost">Hire Me</a>
+    </div>
+    <div class="availability reveal">
+      <span class="availability__dot"></span>
+      Available for Freelance · Remote Worldwide
+    </div>
+
+    <div class="trusted reveal">
+      <p class="trusted__label">Trusted tools I work with</p>
+      <div class="trusted__row">
+        <img src="assets/logo-google-workspace.png" alt="Google Workspace" title="Google Workspace" loading="lazy">
+        <img src="assets/logo-canva.png" alt="Canva" title="Canva" loading="lazy">
+        <img src="assets/logo-chatgpt.png" alt="ChatGPT" title="ChatGPT" loading="lazy">
+        <img src="assets/logo-claude.png" alt="Claude AI" title="Claude AI" loading="lazy">
+        <img src="assets/logo-gmail.png" alt="Gmail" title="Gmail" loading="lazy">
+        <img src="assets/logo-slack.png" alt="Slack" title="Slack" loading="lazy">
+        <img src="assets/logo-clickup.png" alt="ClickUp" title="ClickUp" loading="lazy">
+        <img src="assets/logo-trello.png" alt="Trello" title="Trello" loading="lazy">
+        <img src="assets/logo-zoom.png" alt="Zoom" title="Zoom" loading="lazy">
+        <img src="assets/logo-outlook.png" alt="Outlook" title="Outlook" loading="lazy">
+      </div>
     </div>
   </div>
 
@@ -201,55 +227,166 @@
       <div class="work-card__frame">
         <img src="assets/work-leadgen.jpg" alt="Lead generation spreadsheet with verified LinkedIn contacts" loading="lazy">
       </div>
-      <h3>Lead Generation</h3>
-      <p>A prospect list built from LinkedIn outreach — verified names, roles, contact info, and profile links, ready for follow-up.</p>
-      <button class="view-sample" type="button">View Sample</button>
+      <div class="work-card__body">
+        <h3>Lead Generation</h3>
+        <p>A prospect list built from LinkedIn outreach — verified names, roles, contact info, and profile links, ready for follow-up.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-linkedin-sales-navigator.png" alt="">LinkedIn Sales Navigator</span>
+          <span><img src="assets/logo-salesql.png" alt="">SalesQL</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
     </article>
 
     <article class="work-card reveal" data-full="assets/work-dataentry.jpg" data-title="Data Entry">
       <div class="work-card__frame">
         <img src="assets/work-dataentry.jpg" alt="Cleaned business directory spreadsheet" loading="lazy">
       </div>
-      <h3>Data Entry</h3>
-      <p>A cleaned business directory with contact details and social links, standardized for fast searching and outreach.</p>
-      <button class="view-sample" type="button">View Sample</button>
+      <div class="work-card__body">
+        <h3>Data Entry</h3>
+        <p>A cleaned business directory with contact details and social links, standardized for fast searching and outreach.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-google-workspace.png" alt="">Google Workspace</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
     </article>
 
     <article class="work-card reveal" data-full="assets/work-calendar.jpg" data-title="Calendar Management">
       <div class="work-card__frame">
         <img src="assets/work-calendar.jpg" alt="Weekly calendar fully scheduled with meetings and tasks" loading="lazy">
       </div>
-      <h3>Calendar Management</h3>
-      <p>A full week planned and color-coded — meetings, reviews, and deadlines, with zero double-bookings.</p>
-      <button class="view-sample" type="button">View Sample</button>
+      <div class="work-card__body">
+        <h3>Calendar Management</h3>
+        <p>A full week planned and color-coded — meetings, reviews, and deadlines, with zero double-bookings.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-google-workspace.png" alt="">Google Workspace</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
     </article>
 
     <article class="work-card reveal" data-full="assets/work-contentcal.jpg" data-title="Content Calendar">
       <div class="work-card__frame">
         <img src="assets/work-contentcal.jpg" alt="Social media content calendar spreadsheet" loading="lazy">
       </div>
-      <h3>Content Calendar</h3>
-      <p>A month of social content mapped out — captions, formats, hashtags, and calls-to-action, ready to schedule.</p>
-      <button class="view-sample" type="button">View Sample</button>
+      <div class="work-card__body">
+        <h3>Content Calendar</h3>
+        <p>A month of social content mapped out — captions, formats, hashtags, and calls-to-action, ready to schedule.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-google-workspace.png" alt="">Google Workspace</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
     </article>
 
     <article class="work-card reveal" data-full="assets/work-scraping.jpg" data-title="Data Scraping">
       <div class="work-card__frame">
         <img src="assets/work-scraping.jpg" alt="Scraped local business data spreadsheet" loading="lazy">
       </div>
-      <h3>Data Scraping</h3>
-      <p>Local business data gathered and organized — names, sites, contacts, and addresses, structured for outreach.</p>
-      <button class="view-sample" type="button">View Sample</button>
+      <div class="work-card__body">
+        <h3>Data Scraping</h3>
+        <p>Local business data gathered and organized — names, sites, contacts, and addresses, structured for outreach.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-google-workspace.png" alt="">Google Workspace</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
     </article>
 
     <article class="work-card reveal" data-full="assets/work-email.jpg" data-title="Email Marketing">
       <div class="work-card__frame">
         <img src="assets/work-email.jpg" alt="Scheduled outreach email draft in Gmail" loading="lazy">
       </div>
-      <h3>Email Marketing</h3>
-      <p>A scheduled outreach email drafted end-to-end, from subject line to closing CTA, ready to send.</p>
-      <button class="view-sample" type="button">View Sample</button>
+      <div class="work-card__body">
+        <h3>Email Marketing</h3>
+        <p>A scheduled outreach email drafted end-to-end, from subject line to closing CTA, ready to send.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-gmail.png" alt="">Gmail</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
     </article>
+
+    <article class="work-card reveal" data-full="assets/work-contentsched.jpg" data-title="Content Scheduling">
+      <div class="work-card__frame">
+        <img src="assets/work-contentsched.jpg" alt="Social media post creation and scheduling workflow" loading="lazy">
+      </div>
+      <div class="work-card__body">
+        <h3>Content Scheduling</h3>
+        <p>Planned, designed, and scheduled branded social content end-to-end — writing captions, setting publish times, and previewing the live post before it went out.</p>
+        <div class="work-card__badges">
+          <span><img src="assets/logo-canva.png" alt="">Canva</span>
+          <span><img src="assets/logo-meta-business-suite.png" alt="">Meta Business Suite</span>
+        </div>
+        <button class="view-sample" type="button">View Details</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- TOOLS I USED -->
+<section class="tools" id="tools">
+  <p class="eyebrow eyebrow--center reveal">My Toolkit</p>
+  <h2 class="section-title section-title--center reveal">Tools I Used</h2>
+  <p class="tools__intro reveal">
+    A quick look at the platforms I rely on day-to-day — grouped by what I use them for.
+  </p>
+
+  <div class="tools__groups">
+    <div class="tool-group reveal">
+      <h3 class="tool-group__title">Lead Generation &amp; Prospecting</h3>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="assets/logo-linkedin-sales-navigator.png" alt="LinkedIn Sales Navigator" loading="lazy"><span>LinkedIn Sales Navigator</span></div>
+        <div class="logo-tile"><img src="assets/logo-apollo.png" alt="Apollo.io" loading="lazy"><span>Apollo.io</span></div>
+        <div class="logo-tile"><img src="assets/logo-salesql.png" alt="SalesQL" loading="lazy"><span>SalesQL</span></div>
+        <div class="logo-tile"><img src="assets/logo-contactout.png" alt="ContactOut" loading="lazy"><span>ContactOut</span></div>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <h3 class="tool-group__title">Communication</h3>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="assets/logo-gmail.png" alt="Gmail" loading="lazy"><span>Gmail</span></div>
+        <div class="logo-tile"><img src="assets/logo-outlook.png" alt="Outlook" loading="lazy"><span>Outlook</span></div>
+        <div class="logo-tile"><img src="assets/logo-zoom.png" alt="Zoom" loading="lazy"><span>Zoom</span></div>
+        <div class="logo-tile"><img src="assets/logo-slack.png" alt="Slack" loading="lazy"><span>Slack</span></div>
+        <div class="logo-tile"><img src="assets/logo-loom.png" alt="Loom" loading="lazy"><span>Loom</span></div>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <h3 class="tool-group__title">Project Management</h3>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="assets/logo-clickup.png" alt="ClickUp" loading="lazy"><span>ClickUp</span></div>
+        <div class="logo-tile"><img src="assets/logo-trello.png" alt="Trello" loading="lazy"><span>Trello</span></div>
+        <div class="logo-tile"><img src="assets/logo-meta-business-suite.png" alt="Meta Business Suite" loading="lazy"><span>Meta Business Suite</span></div>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <h3 class="tool-group__title">Content Creation</h3>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="assets/logo-canva.png" alt="Canva" loading="lazy"><span>Canva</span></div>
+        <div class="logo-tile"><img src="assets/logo-capcut.png" alt="CapCut" loading="lazy"><span>CapCut</span></div>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <h3 class="tool-group__title">Productivity</h3>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="assets/logo-google-workspace.png" alt="Google Workspace" loading="lazy"><span>Google Workspace</span></div>
+        <div class="logo-tile"><img src="assets/logo-dropbox.png" alt="Dropbox" loading="lazy"><span>Dropbox</span></div>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <h3 class="tool-group__title">AI Tools</h3>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="assets/logo-chatgpt.png" alt="ChatGPT" loading="lazy"><span>ChatGPT</span></div>
+        <div class="logo-tile"><img src="assets/logo-claude.png" alt="Claude AI" loading="lazy"><span>Claude AI</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -292,7 +429,11 @@
   <button class="lightbox__close" id="lightboxClose" aria-label="Close preview">&times;</button>
   <figure>
     <img src="" alt="" id="lightboxImg">
-    <figcaption id="lightboxCaption"></figcaption>
+    <figcaption>
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDesc"></p>
+      <div class="lightbox__badges" id="lightboxBadges"></div>
+    </figcaption>
   </figure>
 </div>
 
