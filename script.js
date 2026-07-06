@@ -2,6 +2,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Scroll progress bar
+  const progressBar = document.getElementById("scrollProgress");
+  const updateProgress = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + "%";
+  };
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+
+  // Magnetic hover + ripple click for buttons
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".btn").forEach((btn) => {
+    if (!reduceMotion) {
+      btn.addEventListener("mousemove", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.35 - 3}px)`;
+      });
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "";
+      });
+    }
+    btn.addEventListener("click", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const ripple = document.createElement("span");
+      const size = Math.max(rect.width, rect.height);
+      ripple.className = "btn__ripple";
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+      ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+      btn.appendChild(ripple);
+      ripple.addEventListener("animationend", () => ripple.remove());
+    });
+  });
+
   // Sticky nav shrink/blur on scroll
   const nav = document.getElementById("nav");
   const onScroll = () => {
