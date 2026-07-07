@@ -182,12 +182,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       lightbox.classList.add("active");
       document.body.style.overflow = "hidden";
+      if (window.$crisp) $crisp.push(["do", "chat:hide"]);
     });
   });
 
   function closeLightbox() {
     lightbox.classList.remove("active");
     document.body.style.overflow = "";
+    if (window.$crisp) $crisp.push(["do", "chat:show"]);
   }
   closeBtn.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => {

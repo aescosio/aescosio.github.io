@@ -457,5 +457,30 @@
 </div>
 
 <script src="script.js"></script>
+
+<!-- Crisp Live Chat -->
+<script type="text/javascript">
+window.$crisp = [];
+window.CRISP_WEBSITE_ID = "2312efd8-0f32-4fd7-becd-faeabfb40d1a";
+
+// Dark, indigo-accented theme so the widget reads as part of the site's
+// black/dark-blue palette rather than a generic third-party bubble.
+$crisp.push(["config", "color:mode", ["dark"]]);
+$crisp.push(["config", "color:theme", ["indigo"]]);
+
+// One-time, code-rendered greeting (not a bot flow — just a static text
+// bubble shown locally on load). Real conversations are still 100% human.
+$crisp.push(["do", "message:show", ["text",
+  "👋 Welcome!\nThanks for visiting my portfolio.\nIf you'd like to discuss a Virtual Assistant opportunity, collaboration, or simply have a question, feel free to send me a message below.\nI'll receive your message instantly and reply as soon as possible."
+]]);
+
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+</script>
 </body>
 </html>
